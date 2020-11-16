@@ -10,8 +10,7 @@ LABEL NAME="Atmel13/node_app"
 LABEL MAINTAINER=${AUTHOR}
 LABEL VERSION="0.0.1"
 
-RUN apk update
-RUN apk add docker
+RUN apk update && apk add docker
 
 WORKDIR /app
 COPY . .

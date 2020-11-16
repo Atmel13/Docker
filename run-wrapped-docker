@@ -1,0 +1,2 @@
+docker build -t docker_in_docker:latest -f Docker_in_docker .
+docker run docker_in_docker:latest
