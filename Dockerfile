@@ -1,6 +1,6 @@
 ARG AUTHOR="Eugene Mityushkin"
 
-FROM node:15-alpine3.10
+FROM alpine:latest
 
 ARG AUTHOR
 ENV HOST=0.0.0.0
@@ -10,7 +10,8 @@ LABEL NAME="Atmel13/node_app"
 LABEL MAINTAINER=${AUTHOR}
 LABEL VERSION="0.0.1"
 
-RUN apk update && apk add docker
+RUN apk update
+RUN apk add docker
 
 WORKDIR /app
 COPY . .

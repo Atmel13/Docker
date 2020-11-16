@@ -10,7 +10,12 @@ LABEL NAME="Atmel13/node_app"
 LABEL MAINTAINER=${AUTHOR}
 LABEL VERSION="0.0.1"
 
-
-
 WORKDIR /app
 COPY . .
+
+RUN npm i --no-cache
+
+EXPOSE 3000
+
+ENTRYPOINT [ "npm", "run" ]
+CMD [ "script" ]
