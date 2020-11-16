@@ -1,2 +1,2 @@
 docker build -t docker_in_docker:latest -f Docker_in_docker .
-docker run docker_in_docker:latest
+ docker run -p 3000:3000 docker_in_docker:latest
